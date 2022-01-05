@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios";
 
+
 function Soil() {
     const [post, setPost] = React.useState([]);
     const fetchData = React.useCallback(() => {
@@ -26,7 +27,7 @@ function Soil() {
     if (!post) return null;
 
     return (
-        <div>
+        <div className='container'>
       <h1>Soil Moisture and Temperature</h1>
       {post.map((item, idx) => (
         <p key={idx}>{item.soil_moisture} and 
